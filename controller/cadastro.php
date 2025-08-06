@@ -7,9 +7,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     
     $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL); // aqui ele serve  para limpar o valor, removendo caracteres inválidos de um email. 
+    
     // o filter_sanitize_email não veriifica se o email é valido, apenas "prepara" e limpa caracteres que n deveriam estar ali
     $senha = htmlspecialchars($_POST['senha'] ?? '', ENT_QUOTES, 'UTF-8') ; // usado para defesa de XSS, que basicamente vamos controlar os dados recebidos para não receber scripts maliciosos
 
+    //escapando caracteres especiais da senha, como <, >, &, e outros que poderiam ser usados para inserir scripts maliciosos.
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){  // validar de fato o email para caso nao esteja no modelo ele nao segue com o cadastro
        echo "email inválido" ;
     }
