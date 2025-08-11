@@ -14,12 +14,14 @@ include "../controller/cadastro.php";
 <body>
    
     <div class="cadastrar">
-        <h1>Cadastre-se</h1>
+        <h1>Halla Madrid!</h1>
+        <h3>Cadastre-se</h3>
         <form action="telaCadastro.php" method="POST">
         <input type="text" name="email" required>
         <input type="text" name="senha" required>
         <button type="submit">Cadastrar</button>
+        <p>Vá para <a href="#">Login</a></p>
     </form>
-    </div>
+    </div>  
 </body>
 </html>

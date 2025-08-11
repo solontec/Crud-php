@@ -10,8 +10,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(empty($email) || empty($senha)){
         echo "preencha todos os campos";
     } 
+
+    if($email > 35 || $senha > 16 || $email )
     $verificaLogin = "SELECT email, senha  FROM usuarios WHERE email = ?";
 
+    
     
     $stmt = $conn->prepare($verificaLogin);
 
