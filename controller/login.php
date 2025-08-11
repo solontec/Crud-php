@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
             if(password_verify($senha , $usuario['senha'])){
-                header("Location: telaInicial.php");
+                header("Location: /views/telaInicial.php");
                 exit();
             } else{
                 echo "senha incorreta";
