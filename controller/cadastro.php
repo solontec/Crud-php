@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     //escapando caracteres especiais da senha, como <, >, &, e outros que poderiam ser usados para inserir scripts maliciosos.
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){  // validar de fato o email para caso nao esteja no modelo ele nao segue com o cadastro
-       echo "email inválido" ;
+       echo "email inválido" ;  
     }
     if(empty($email) || empty($senha)){ // utilizando empty para verificar se o campo ( que a pessoa inseriu está vazio)
         echo "preencha todos os campos"; // EMPTY -----

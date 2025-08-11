@@ -1,13 +1,13 @@
 <?php 
 
 require_once "../model/conn.php";
-include "../controller/login.php";
+require_once "../controller/login.php";
 
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,19 @@ include "../controller/login.php";
 <body>
     <div class="login">
         <form action="telaLogin.php" method="POST">
-            <input type="email" name="iEmail" required>
-            <input type="password" name="iSenha" required>
+            <input type="email" name="email" required>
+            <input type="password" name="senha" required>
             <button type="submit">Entrar</button>
-        </form>
+        </form>  
     </div>
+
+    <style>
+        body{
+            background-color: pink;
+        }
+
+        
+    </style>
 </body>
 </html>
 
