@@ -1,0 +1,82 @@
+/* Cadastro.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cadastrar {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.cadastrar form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cadastrar input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.cadastrar input:focus {
+  border-color: #764ba2;
+  outline: none;
+}
+
+.cadastrar button {
+  padding: 12px;
+  background-color: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cadastrar button:hover {
+  background-color: #5b3f8c;
+}
+
+.inicio {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.inicio button {
+  background-color: white;
+  border: 2px solid #764ba2;
+  color: #764ba2;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inicio button:hover {
+  background-color: #764ba2;
+  color: white;
+}
+
+.inicio button a {
+  text-decoration: none;
+  color: inherit;
+}

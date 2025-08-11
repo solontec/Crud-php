@@ -8,16 +8,18 @@ include "../controller/cadastro.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela Cadastro</title>
+    <link rel="stylesheet" href="../views/static/telaCadastro.css">
 </head>
 <body>
+   
     <div class="cadastrar">
+        <h1>Cadastre-se</h1>
         <form action="telaCadastro.php" method="POST">
         <input type="text" name="email" required>
         <input type="text" name="senha" required>
         <button type="submit">Cadastrar</button>
     </form>
-    
     </div>
 </body>
 </html>

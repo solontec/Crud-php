@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             
             //verificar agora a senha corretamente com a funcao passord_verify, para ver se bate a senha cripto
             // com a senha inserida
-    var_dump($verificaLogin);
+ 
     if($resultado->num_rows === 1){
         // passa o result para $usuario com fetch assoc
         $usuario = $resultado->fetch_assoc();
@@ -41,7 +41,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
             if(password_verify($senha , $usuario['senha'])){
-                header("Location: /views/telaInicial.php");
+                session_start();
+                $_SESSION['usuario'] = true;
+                header("Location: ../views/telaInicial.php");
                 exit();
             } else{
                 echo "senha incorreta";
