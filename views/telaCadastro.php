@@ -20,7 +20,7 @@ include "../controller/cadastro.php";
         <input type="text" name="email" required>
         <input type="text" name="senha" required>
         <button type="submit">Cadastrar</button>
-        <p>Vá para <a href="#">Login</a></p>
+        <p>Vá para <a href="../views/telaLogin.php">Login</a></p>
     </form>
     </div>  
 </body>
