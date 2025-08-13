@@ -3,6 +3,7 @@
 require_once "../model/conn.php";
 
 
+
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $_POST['email'] ?? ''; // os ?? verifica se existe alguma informação e obriga a inserir algo para passar na variavel, garante que a variavel sempre tenha um valor
     $senha = $_POST['senha'] ?? '';
@@ -41,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $usuario = $resultado->fetch_assoc();
         
         var_dump($senha);
-
+        var_dump($_SESSION['usuario']);
 
             if(password_verify($senha , $usuario['senha'])){
                 session_start();
@@ -52,8 +53,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 echo "senha incorreta";
             }
 
-
-  
     
     }
     $stmt->close();
