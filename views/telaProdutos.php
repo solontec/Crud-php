@@ -11,7 +11,9 @@ if(!isset($_SESSION['usuario'])){
     // utilizando script dentro de echo para redirecionar e respeitar header com echo
 
     // sempre usar aspas simples para definir caminhos 
-    
-    
 }
 ?>
+
+
+
+

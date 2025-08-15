@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         echo "preencha todos os campos";
     } 
 
-    if($email > 35 || $senha > 16 || $email )
+    
     $verificaLogin = "SELECT email, senha  FROM usuarios WHERE email = ?";
 
     
