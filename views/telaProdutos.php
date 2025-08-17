@@ -1,6 +1,5 @@
 <?php
 require_once "../model/conn.php";
-require_once "../controller/produtos.php";
 require_once "../controller/login.php";
 
 
@@ -12,7 +11,7 @@ if(!isset($_SESSION['usuario'])){
 
     // sempre usar aspas simples para definir caminhos 
 }
-?>
+?>  
 
 
 

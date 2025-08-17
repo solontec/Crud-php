@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if(empty($email) || empty($senha)){
         echo "preencha todos os campos";
-    } 
+    }   
 
     
     $verificaLogin = "SELECT email, senha  FROM usuarios WHERE email = ?";
@@ -55,8 +55,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     
     }
-    $stmt->close();
-    $conn->close();
+    
 }
 
 
