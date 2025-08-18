@@ -11,5 +11,3 @@ $conn = new mysqli($host, $user, $pass, $banco, $port);
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
-
-
