@@ -28,27 +28,29 @@ $result = $stmt->get_result();
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Meus produtos</h1>
+   
     <a href="telaLogin.php">Deslogar</a>
+    <p>Não possui produtos ainda? Adicione aqui na sua loja!</p>
 
+    <a href="telaAdicionar.php">Adicione seus produtos</a>
+
+     <h1>Meus produtos</h1>
+     <div class="mostrar">
     <?php
 
-     if($result->num_rows > 0){ // usar o num rows para verificar que se tiver pelo menos um result ele mostra, se nao ele vai mostrar o erro
+     if($result->num_rows > 0)  { // usar o num rows para verificar que se tiver pelo menos um result ele mostra, se nao ele vai mostrar o erro
 
         while($row = $result->fetch_assoc()){ // fecth assoc para criar o array assoc, para comparar result ou algo do tipo
-            echo $row['id'];
-            echo $row['nome'];
-            echo $row['descricao'];
+            echo $row['id'] . "<br>"; 
+            echo $row['nome'] . "<br>";
+            echo $row['descricao'] . "<br>";
             
         }
     } else{
         echo "nenhum produto encontrado";
     }
-
-       
-
-
     ?>
+    </div>
 </div>
 
 </body>

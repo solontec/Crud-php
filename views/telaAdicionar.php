@@ -20,13 +20,14 @@ if(!isset($_SESSION['usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar produtos na sua loja</title>
 </head>
 <body>
     <div class="adicionar">
     <form action="../controller/inicial.php" method="POST">
         <input type="text" name="nome" required>
         <input type="text" name="descricao" required>
+        <input type="file" name="arquivo">
         <button type="submit">Adicione seu produto</button>
     </form>
 </body>

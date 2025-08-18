@@ -41,8 +41,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         // passa o result para $usuario com fetch assoc
         $usuario = $resultado->fetch_assoc();
         
-        var_dump($senha);
-        var_dump($_SESSION['usuario']);
+        
 
             if(password_verify($senha , $usuario['senha'])){
                 session_start();
