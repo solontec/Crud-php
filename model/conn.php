@@ -4,7 +4,7 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $banco = "tbl_crud";
-$port = 3307;
+$port = 3306;
 
 $conn = new mysqli($host, $user, $pass, $banco, $port);
 
