@@ -2,20 +2,18 @@
 
 class Pessoa{
     public $nome;
-    public  $idade;
+    
+    public function definirNome($novoNome){
+        $this->nome = $novoNome;
+    } 
 
-    public function Falar(){
-        echo "falou" ;
+    public function dizerNome(){
+    echo "meu nome é " . $this->nome;
     }
 }
 
+$p1 = new Pessoa();
+$p1->definirNome("Guilherme");
+$p1->dizerNome();
 
-$guilherme = new Pessoa();
-$guilherme->nome = "guilherme Solon"; // quando eu acessar atributo nao coloca $ da 
-$guilherme->idade = 17;
-$guilherme->falar();
-
-
-
-echo $guilherme->nome;
-echo $guilherme->idade;
+?>
