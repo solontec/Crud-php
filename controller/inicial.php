@@ -17,10 +17,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $enviarDesc = "INSERT INTO produtos(nome, descricao) VALUES (?, ?)";
 
-    $stmt = $conn->prepare($enviarDesc);
+    $stmt = $db->prepare($enviarDesc);
 
     if(!$stmt){
-            echo "problemas com prepare" . $conn->connect_error;
+            echo "problemas com prepare" . $db->connect_error;
     }
 
 
@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
     $stmt->close();
-    $conn->close();
+    $db->close();
 
     header("Location: ../views/telaInicial.php");
     }

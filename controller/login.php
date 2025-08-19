@@ -17,10 +17,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     
     
-    $stmt = $conn->prepare($verificaLogin);
+    $stmt = $db->prepare($verificaLogin);
 
     if(!isset($stmt)){
-        echo "erro no prepared stantments" . $conn->error   ;
+        echo "erro no prepared stantments" . $db->error   ;
     } 
     
     $stmt->bind_param("s", $email);

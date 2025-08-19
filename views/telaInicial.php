@@ -12,7 +12,7 @@ if(!isset($_SESSION['usuario'])){
 } 
 
 $exibirProdutos = "SELECT id, nome, descricao FROM produtos";
-$stmt = $conn->prepare($exibirProdutos);
+$stmt = $db->prepare($exibirProdutos);
 
 
 $stmt->execute();

@@ -6,7 +6,7 @@ class Conexao{
     private $pass;
     private $banco;
     private $port;
-    
+
     public function getHost(){
         return $this->host;
 } 
@@ -67,5 +67,3 @@ $conn->setUser("root");
 $conn->setPass("");
 $conn->setBanco("tbl_crud");
 $conn->setPort(3307);
-
-$db = $conn->conectar();

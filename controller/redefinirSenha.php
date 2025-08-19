@@ -11,7 +11,7 @@ $hashSenhaNova = password_hash($senhaNova, PASSWORD_DEFAULT); // aqui eu gero um
 
 $update = "UPDATE usuarios SET senha = ? WHERE email = ?"; // aqui coloco a query onde vai atualizar a senha
 // ele atualiza a senha do user para cada email, entao ele pede o email pra saber onde você vai atualizar
-$stmt = $conn->prepare($update);
+$stmt = $db->prepare($update);
 
 if(!$stmt){
     die("erro no prepare") . $conn->connect_error(); // preapre comum e verificacao
@@ -28,6 +28,6 @@ if($stmt->execute()){
 
 
 $stmt->close();
-$conn->close();
+$db->close();
 
 }

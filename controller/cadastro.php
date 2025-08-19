@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
     $verificar = "SELECT id, email FROM usuarios WHERE email = ?"; // verificar o email para casos de duplicado
-    $stmt = $conn->prepare($verificar); // fzd o prepare!
+    $stmt = $db->prepare($verificar); // fzd o prepare!
  
     if(!$stmt){
         echo "prepare deu ruim";
@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT); // gerando o hash da senha novamente, passando a outra variavel e divindo codigo
     $cadastro = "INSERT INTO usuarios(email, senha) VALUES (?, ?)"; // insere no banco com insert nos campos 
-    $stmt = $conn->prepare($cadastro);  // prepara ja o cadsatro novamente
+    $stmt = $db->prepare($cadastro);  // prepara ja o cadsatro novamente
 
     
 
@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     }
 
     $stmt->close();
-    $conn->close(); // fecha tudo
+    $db->close(); // fecha tudo
 }
 ?> 
 
