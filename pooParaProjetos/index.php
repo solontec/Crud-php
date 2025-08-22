@@ -6,7 +6,6 @@ class Pessoa{
     public function definirNome($novoNome){
         $this->nome = $novoNome;
     } 
-
     public function dizerNome(){
     echo "meu nome é " . $this->nome;
     }

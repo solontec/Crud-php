@@ -1,5 +1,6 @@
 <?php
 
+
 // quando usamos private e queremos acessar usamos getters e setters
 class Login{
     private $email;
